@@ -1,13 +1,55 @@
+:root {
+    --font-size: 1em;
+    --color-text: #f2f2f2;
+    --color-link: #f9dd79;
+}
+
 body {
     position: relative;
     margin: 0;
     min-width: auto;
     font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
-    font-size: 16px;
-    line-height: 32px;
-    color: #f2f2f2;
+    font-size: 1em;
+    line-height: 2.5em;
+    color: var(--color-text);
     background-color: #141530;
 }
+
+header {
+    background-color: #050516;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+    display: flex;
+    margin-right: 15px;
+}
+
+li:last-child{
+    margin: 0;
+}
+
+.link{
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* ----------------- */
 
 .container {
     max-width: 1408px;
@@ -30,7 +72,7 @@ body {
 }
 
 figure{
-    width: 300px;
+    /* width: 300px; */
     height: 300px;
     padding: 0 16px;
     margin: 0 auto;
@@ -52,7 +94,7 @@ figure img{
 }
 
 .heading {
-    z-index: 1;
+    /* z-index: 1; */
     order: 2;
     margin: 0 0 0 -10px;
     max-width: 815px;
@@ -63,7 +105,7 @@ figure img{
 }
 
 .hero-image p {
-    z-index: 1;
+    /* z-index: 1; */
     order: 1;
     margin: 0;
     padding: 32px 0;
@@ -273,8 +315,7 @@ figure img{
     box-shadow: 0 4px 16px rgba(249, 221, 121, 0.4);
     border-radius: 24px;
     transition: background-color 100ms, box-shadow 100ms;
-
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 .button:focus,

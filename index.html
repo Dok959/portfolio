@@ -2,7 +2,6 @@
 <html lang="ru-RU">
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Сайт портфолио Елисеева Александра" />
         <title>Портфолио</title>
@@ -14,15 +13,27 @@
         <script src="script.js" defer></script>
     </head>
     <body>
-        <section class="hero-image">
-            <div class="container">
-                <h1 class="heading">Александр Елисеев</h1>
-                <p>Junior разработчик</p>
-            </div>
-            <figure>
-                <img src="files/user.jpg" width="928" height="536" alt="Фотография разработчика">
-            </figure>
-        </section>
+        <header>
+            <nav>
+                <ul>
+                    <li><a class="link" href="#skills">Навыки</a></li>
+                    <li><a class="link" href="#works">Работы</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- ---------------------------- -->
+        <main>
+            <section class="hero-image">
+                <div class="container">
+                    <h1 class="heading">Александр Елисеев</h1>
+                    <p>Junior разработчик</p>
+                </div>
+                <figure>
+                    <img src="files/user.jpg" width="928" height="536" alt="Фотография разработчика">
+                </figure>
+            </section>
+        </main>
 
         <section class="intro">
             <h2 class="subheading">Мои навыки</h2>
@@ -55,7 +66,7 @@
                     >
                 </p> -->
 
-                <!-- <div class="skills">
+                <!-- <div id="skills" class="skills">
                     <h3>Мои навыки</h3>
                     <dl class="skills-list">
                         <dt class="skill-html">HTML</dt>
@@ -86,7 +97,7 @@
                 <h4 style="font-size: 1.5em">Использованные средства</h4>
                 <p>MySQL, Node.js, Express</p>
 
-                <a class="button" href="#" title="Ссылка временно не доступна"
+                <a class="button" href="https://github.com/Dok959/StudentsDiary" title="Ссылка временно не доступна" type="_blank"
                     >Открыть страницу</a
                 >
             </div>
