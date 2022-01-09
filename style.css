@@ -1,7 +1,11 @@
 :root {
     --font-size: 1em;
-    --color-text: #f2f2f2;
-    --color-link: #f9dd79;
+
+    --color-bg:#222831;
+    --color-text:#f9dd79;
+    --color-link:#32E0C4;
+    --color-accent:#393E46;
+
 }
 
 body {
@@ -12,19 +16,24 @@ body {
     font-size: 1em;
     line-height: 2.5em;
     color: var(--color-text);
-    background-color: #141530;
+    background-color: var(--color-accent);
 }
 
 header {
-    background-color: #050516;
+    background-color: var(--color-bg);
     position: fixed;
     z-index: 1;
     width: 100%;
+    height: 4em;
+    min-height: 40px;
+    padding: 0 1%;
 }
 
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: inherit;
 }
 
 ul{
@@ -37,6 +46,7 @@ li {
     list-style-type: none;
     display: flex;
     margin-right: 15px;
+    font-size: 1.5em;
 }
 
 li:last-child{
@@ -49,71 +59,69 @@ li:last-child{
     font-size: 1em;
 }
 
-/* ----------------- */
-
-.container {
-    max-width: 1408px;
-    margin: 0 auto;
-    padding: 0 16px;
+main{
+    padding: 0 1%;
 }
 
 .hero-image {
-    position: relative;
-    padding: 200px 0;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 48px;
+    padding: 15% 0;
     display: flex;
 }
 
-.hero-image .container {
-    display: flex;
+.container {
+    display: inherit;
     flex-direction: column;
+    width: 53%;
+    margin-right: 5em;
 }
 
-figure{
-    /* width: 300px; */
-    height: 300px;
-    padding: 0 16px;
-    margin: 0 auto;
+.text-accent{
+    color: var(--color-link);
+    margin: 0;
+    padding: 32px 0;
+    padding-bottom: 16px;
+    font-size: 2em;
+    line-height: 48px;
 }
 
-figure img{
+.fio {
+    margin: 0;
+    max-width: 815px;
+    font-size: 6em;
+    line-height: 112px;
+    font-weight: 500;
+}
+
+/* figure{
+
+} */
+
+
+/* ----------------- */
+
+
+/* figure img{
     width: inherit;
     height: inherit;
     border-radius: 50%;
-}
+} */
 
-.hero-image::after {
+/* .hero-image::after {
     position: absolute;
     content: '';
     height: 0px;
     width: 100%;
     bottom: 0;
     border-top: 2px solid #5053a8;
-}
+} */
 
-.heading {
-    /* z-index: 1; */
-    order: 2;
-    margin: 0 0 0 -10px;
-    max-width: 815px;
-    font-size: 96px;
-    font-size: 6em;
-    line-height: 112px;
-    font-weight: 500;
-}
-
-.hero-image p {
-    /* z-index: 1; */
-    order: 1;
+/* .hero-image p {
     margin: 0;
     padding: 32px 0;
     padding-bottom: 16px;
     font-size: 2em;
     line-height: 48px;
-    color: #f9dd79;
-}
+} */
 
 .intro,
 .portfolio {
