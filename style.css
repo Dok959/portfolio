@@ -59,6 +59,20 @@ li:last-child{
     font-size: 1em;
 }
 
+.link::after{
+    display: inherit;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: var(--color-link);
+    transition: width 0.3s ease-in-out 0s;
+}
+
+.link:hover::after{
+    width: 100%;
+}
+/* todo как-то визуально отделять часть где находится пользователь */
+
 main{
     padding: 0 1%;
 }
@@ -66,13 +80,15 @@ main{
 .hero-image {
     padding: 15% 0;
     display: flex;
+    align-content: center;
+    margin: 0 5%;
+    justify-content: space-between;
 }
 
 .container {
     display: inherit;
     flex-direction: column;
     width: 53%;
-    margin-right: 5em;
 }
 
 .text-accent{
@@ -92,9 +108,23 @@ main{
     font-weight: 500;
 }
 
-/* figure{
+figure{
+    display: inline-flex;
+    margin: 0px;
+    margin-block: auto;
+    margin-inline: unset;
+    margin: 1px 0;
+}
 
-} */
+img{
+    width: 288px;
+}
+
+hr{
+    height: 2px;
+    background-color: var(--color-link);
+    border: none;
+}
 
 
 /* ----------------- */
@@ -123,10 +153,10 @@ main{
     line-height: 48px;
 } */
 
-.intro,
+/* .intro,
 .portfolio {
     background-color: #141530;
-}
+} */
 
 .intro {
     padding: 160px 0 120px;
@@ -374,5 +404,14 @@ p {
 @media (max-width: 800px) {
     body {
         font-size: 12px;
+    }
+}
+
+
+
+/* Разобраться */
+@media screen and (min-width: 600px) {
+    ul {
+        flex-direction: row;
     }
 }
