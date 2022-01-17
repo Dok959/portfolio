@@ -1,22 +1,18 @@
 :root {
     --font-size: 1em;
 
-    --color-bg:#222831;
-    --color-text:#f9dd79;
-    --color-link:#32E0C4;
-    --color-accent:#393E46;
-
+    --color-bg: #222831;
+    --color-text: #f9dd79;
+    --color-link: #32e0c4;
+    --color-accent: #393e46;
 }
 
 body {
     position: relative;
-    margin: 0;
-    min-width: auto;
-    font-family: 'Montserrat', 'Helvetica', 'Arial', sans-serif;
-    font-size: 1em;
-    line-height: 2.5em;
     color: var(--color-text);
     background-color: var(--color-accent);
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -25,41 +21,31 @@ header {
     z-index: 1;
     width: 100%;
     height: 4em;
-    min-height: 40px;
-    padding: 0 1%;
-}
-
-nav {
+    /* min-height: 40px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: inherit;
 }
 
-ul{
-    margin: 0;
-    padding: 0;
+nav ul {
     display: flex;
 }
 
 li {
-    list-style-type: none;
-    display: flex;
     margin-right: 15px;
     font-size: 1.5em;
 }
 
-li:last-child{
+li:last-child {
     margin: 0;
 }
 
-.link{
+.link {
     color: var(--color-link);
     text-decoration: none;
-    font-size: 1em;
 }
 
-.link::after{
+.link::after {
     display: inherit;
     content: '';
     width: 0;
@@ -68,17 +54,20 @@ li:last-child{
     transition: width 0.3s ease-in-out 0s;
 }
 
-.link:hover::after{
+.link:hover::after {
     width: 100%;
 }
 /* todo как-то визуально отделять часть где находится пользователь */
 
-main{
+section {
     padding: 0 1%;
 }
 
-.hero-image {
+section {
     padding: 15% 0;
+}
+
+.hero-image {
     display: flex;
     align-content: center;
     margin: 0 5%;
@@ -91,7 +80,7 @@ main{
     width: 53%;
 }
 
-.text-accent{
+.text-accent {
     color: var(--color-link);
     margin: 0;
     padding: 32px 0;
@@ -108,7 +97,7 @@ main{
     font-weight: 500;
 }
 
-figure{
+figure {
     display: inline-flex;
     margin: 0px;
     margin-block: auto;
@@ -116,19 +105,18 @@ figure{
     margin: 1px 0;
 }
 
-img{
+img {
     width: 288px;
 }
 
-hr{
+hr {
     height: 2px;
+    width: 100%;
     background-color: var(--color-link);
     border: none;
 }
 
-
 /* ----------------- */
-
 
 /* figure img{
     width: inherit;
@@ -387,7 +375,7 @@ p {
         font-size: 12px;
     }
 
-    .hero-image {
+    /* .hero-image {
         height: 300px;
         padding: 0px;
     }
@@ -398,7 +386,7 @@ p {
 
     .intro {
         padding: 100px 0;
-    }
+    } */
 }
 
 @media (max-width: 800px) {
@@ -407,11 +395,9 @@ p {
     }
 }
 
-
-
 /* Разобраться */
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
     ul {
-        flex-direction: row;
+        flex-direction: column;
     }
 }
