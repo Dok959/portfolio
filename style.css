@@ -21,12 +21,12 @@ header {
     z-index: 1;
     width: 100%;
     height: 4em;
-    /* min-height: 40px; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Навигация */
 nav ul {
     display: flex;
 }
@@ -34,22 +34,25 @@ nav ul {
 li {
     margin-right: 15px;
     font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 li:last-child {
     margin: 0;
 }
 
+/* Ссылки */
 .link {
     color: var(--color-link);
     text-decoration: none;
+    display: block;
 }
 
 .link::after {
     display: inherit;
     content: '';
     width: 0;
-    height: 1px;
+    height: 1.6px;
     background-color: var(--color-link);
     transition: width 0.3s ease-in-out 0s;
 }
@@ -59,12 +62,10 @@ li:last-child {
 }
 /* todo как-то визуально отделять часть где находится пользователь */
 
-section {
-    padding: 0 1%;
-}
-
+/* Блоки */
 section {
     padding: 15% 0;
+    padding: 10em 0;
 }
 
 .hero-image {
