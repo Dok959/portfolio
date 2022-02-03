@@ -68,14 +68,14 @@ section {
     padding: 10em 0;
 }
 
-.hero-image {
+.intro {
     display: flex;
     align-content: center;
     margin: 0 5%;
     justify-content: space-between;
 }
 
-.container {
+.introTitle {
     display: inherit;
     flex-direction: column;
     width: 53%;
@@ -117,80 +117,94 @@ hr {
     border: none;
 }
 
-/* ----------------- */
-
-/* figure img{
-    width: inherit;
-    height: inherit;
-    border-radius: 50%;
-} */
-
-/* .hero-image::after {
-    position: absolute;
-    content: '';
-    height: 0px;
-    width: 100%;
-    bottom: 0;
-    border-top: 2px solid #5053a8;
-} */
-
-/* .hero-image p {
-    margin: 0;
-    padding: 32px 0;
-    padding-bottom: 16px;
-    font-size: 2em;
-    line-height: 48px;
-} */
-
-/* .intro,
-.portfolio {
-    background-color: #141530;
-} */
-
-.intro {
-    padding: 160px 0 120px;
-    /* min-height: 828px; */
-}
-
 .subheading {
-    margin: 0 0 100px;
+    margin-bottom: 100px;
     text-align: center;
     font-size: 5em;
     line-height: 88px;
     font-weight: 500;
-    color: #f9dd79;
+    color: var(--color-text);
 }
 
-.intro .container {
-    position: relative;
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.dot {
-    height: 80px;
-    width: 80px;
-    border: 1px solid #5053a8;
-    border-radius: 50%;
-    display: inline-flex;
-    align-items: center;
+.languages {
+    margin-bottom: 50px;
+}
+
+.progress {
+    margin: 10px;
+    display: inline-block;
+    width: 360px;
+}
+
+progress {
+    border-radius: 5px;
+    width: 300px;
+    height: 15px;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 5px;
+}
+progress::-webkit-progress-value {
+    background-color: var(--color-link);
+    border-radius: 5px;
+}
+progress::-moz-progress-bar {
+    border-radius: 5px;
+}
+progress::-webkit-progress-value {
+    background-color: var(--color-link);
+    border-radius: 5px;
+}
+
+.project {
+    display: flex;
     justify-content: space-evenly;
-    font-size: 25px;
 }
 
-.user-image {
-    position: absolute;
-    margin: 0;
+.projectTitle {
+    width: 50%;
 }
 
-.user-image img {
-    width: 640px;
-    height: 640px;
-    object-fit: cover;
+h3 {
+    font-size: 2.5em;
+    color: var(--color-link);
 }
 
-.intro .container .skills {
-    /* margin-left: 720px; */
-    margin-bottom: 56px;
+.description,
+.toolsList {
+    font-size: 1.2em;
+    margin: 10px 0;
 }
+
+.images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.scale {
+    margin: 10px 0;
+    transition: 1s;
+}
+.scale:first-child {
+    margin-top: 0;
+}
+.scale:last-child {
+    margin-bottom: 0;
+}
+.scale:hover {
+    transform: scale(1.5);
+}
+
+/* ----------------- */
 
 .intro h3,
 .portfolio h3 {
@@ -199,91 +213,6 @@ hr {
     font-size: 2.5em;
     line-height: 40px;
     font-weight: 500;
-}
-
-.intro p {
-    margin: 0;
-    z-index: 2;
-}
-
-.about-me {
-    display: inline-block;
-    max-width: 50%;
-}
-
-.skills {
-    margin-bottom: 0;
-    max-width: 100%;
-    min-width: 35%;
-    float: right;
-}
-
-.skills h3 {
-    margin-bottom: 40px;
-}
-
-.skills-list {
-    margin: 0;
-    padding: 0;
-}
-
-.skills-list dt {
-    margin: 0 0 8px;
-    padding-left: 46px;
-    height: 36px;
-    /* font-size: 24px; */
-    font-size: 2em;
-    letter-spacing: 1px;
-    background-repeat: no-repeat;
-    background-position: left;
-}
-
-.skill-html {
-    background-image: url('img/icon-html.svg');
-}
-
-.skill-css {
-    background-image: url('img/icon-css.svg');
-}
-.skill-js {
-    background-image: url('img/icon-js.png');
-    background-size: contain;
-}
-.skill-nodejs {
-    background-image: url('img/icon-nodeJs.png');
-    background-size: contain;
-}
-.skill-c-sharp {
-    background-image: url('img/icon-c-sharp.svg');
-}
-.skill-java {
-    background-image: url('img/icon-java.svg');
-}
-.skill-python {
-    background-image: url('img/icon-python.png');
-}
-.skill-sql {
-    background-image: url('img/icon-sql.png');
-    background-size: contain;
-}
-
-.level {
-    margin: 0 0 40px;
-    height: 24px;
-    text-align: right;
-    background-color: #0b0c23;
-    box-shadow: inset 0 0 12px #070716;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.skills .level div {
-    margin: 0;
-    height: 24px;
-    letter-spacing: 1px;
-    line-height: 26px;
-    background-color: #5053a8;
-    background-image: url('img/progress-pattern.svg');
 }
 
 .portfolio {
